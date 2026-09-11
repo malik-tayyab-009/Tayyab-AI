@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tayyab AI</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#172033;
+}
+
+header{
+  background:linear-gradient(135deg,#071a35,#1261b0);
+  color:white;
+  padding:25px 18px;
+  text-align:center;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:bold;
+}
+
+header p{
+  margin-top:8px;
+  opacity:.9;
+}
+
+nav{
+  background:#fff;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 2px 10px #0001;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+nav a{
+  color:#172033;
+  text-decoration:none;
+  margin:0 8px;
+  font-weight:bold;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+  color:#1261b0;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+  max-width:650px;
+  margin:auto;
+}
+
+.btn{
+  display:inline-block;
+  margin:20px 5px;
+  padding:13px 20px;
+  border-radius:9px;
+  text-decoration:none;
+  color:white;
+  background:#1261b0;
+  font-weight:bold;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+section{
+  padding:45px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:30px;
+  color:#1261b0;
+}
+
+.about{
+  background:white;
+  border-radius:15px;
+  padding:30px;
+  line-height:1.7;
+  box-shadow:0 4px 15px #0001;
+}
+
+.chat{
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 4px 15px #0001;
+  max-width:700px;
+  margin:auto;
+}
+
+.messages{
+  height:300px;
+  overflow-y:auto;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:15px;
+  background:#f8fafc;
+}
+
+.message{
+  padding:10px 13px;
+  margin:8px 0;
+  border-radius:10px;
+  max-width:85%;
+}
+
+.bot{
+  background:#e5eef9;
+}
+
+.user{
+  background:#1261b0;
+  color:white;
+  margin-left:auto;
+}
+
+.chatbox{
+  display:flex;
+  gap:8px;
+}
+
+.chatbox input{
+  flex:1;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  outline:none;
+}
+
+.chatbox button{
+  border:0;
+  background:#1261b0;
+  color:white;
+  padding:13px 18px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.contact{
+  text-align:center;
+  background:white;
+  border-radius:15px;
+  padding:30px;
+  box-shadow:0 4px 15px #0001;
+}
+
+footer{
+  margin-top:30px;
+  background:#071a35;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:34px;
+  }
+
+  nav a{
+    font-size:14px;
+    margin:0 4px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🤖 Tayyab AI</div>
+  <p>Your Smart AI Assistant</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#chat">AI Chat</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+
+  <h1>Welcome to Tayyab AI 🤖</h1>
+
+  <p>
+    Tayyab AI is a modern AI assistant website designed
+    to provide a simple and friendly chat experience.
+  </p>
+
+  <a class="btn" href="#chat">💬 Start Chat</a>
+
+  <a class="btn whatsapp"
+     href="https://wa.me/923700243810">
+     WhatsApp
+  </a>
+
+  <a class="btn"
+     href="tel:03700243810">
+     📞 Call
+  </a>
+
+</section>
+
+<section id="chat">
+
+  <h2 class="title">💬 Tayyab AI Chat</h2>
+
+  <div class="chat">
+
+    <div class="messages" id="messages">
+
+      <div class="message bot">
+        🤖 Hello! I'm Tayyab AI. How can I help you?
+      </div>
+
+    </div>
+
+    <div class="chatbox">
+
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type your message..."
+      >
+
+      <button onclick="sendMessage()">
+        Send
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2 class="title">ℹ️ About Tayyab AI</h2>
+
+  <div class="about">
+
+    <p>
+      <b>Tayyab AI</b> is a modern AI assistant project.
+      Our goal is to provide users with a simple,
+      fast and mobile-friendly AI experience.
+    </p>
+
+    <br>
+
+    <p>
+      This website is designed to work smoothly on
+      mobile phones, tablets and computers.
+    </p>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <h2 class="title">📩 Contact Tayyab AI</h2>
+
+  <div class="contact">
+
+    <p>
+      Have a question? Contact us directly.
+    </p>
+
+    <a class="btn"
+       href="tel:03700243810">
+       📞 03700243810
+    </a>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/923700243810">
+       💬 WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>© 2026 Tayyab AI — All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function sendMessage(){
+
+  let input = document.getElementById("userInput");
+  let text = input.value.trim();
+
+  if(text === ""){
+    return;
+  }
+
+  let messages = document.getElementById("messages");
+
+  let userMessage = document.createElement("div");
+  userMessage.className = "message user";
+  userMessage.innerText = text;
+
+  messages.appendChild(userMessage);
+
+  input.value = "";
+
+  setTimeout(function(){
+
+    let botMessage = document.createElement("div");
+    botMessage.className = "message bot";
+
+    botMessage.innerText =
+      "🤖 I'm Tayyab AI. This is the demo chat. A real AI API can be connected here later.";
+
+    messages.appendChild(botMessage);
+
+    messages.scrollTop = messages.scrollHeight;
+
+  },700);
+
+  messages.scrollTop = messages.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>
